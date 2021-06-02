@@ -18,7 +18,7 @@ AUDIO.VISUALIZER = (function () {
 
     function Visualizer (cfg) {
         this.isPlaying = false;
-        this.autoplay = cfg.autoplay || false;
+        this.autoplay = cfg.autoplay || true;
         this.loop = cfg.loop || false;
         this.audio = document.getElementById(cfg.audio) || {};
         this.canvas = document.getElementById(cfg.canvas) || {};

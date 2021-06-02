@@ -76,6 +76,7 @@
                                            
                                         
                                         <li><a href="contact.html">Contact</a></li>
+                                        
                                     </ul>
                                 </div>
                             </nav>
@@ -96,17 +97,26 @@
 
         <!-- START Hero Section -->
         
+
+        
+        
 	    <section class="hero-section">
 
-            <br> <br>
+            <html>
 
-            <div class="vz-wrapper">
-                <audio id="myAudio" src="assets/Audio/mainaudio.mp3" data-author="Click to Pause" data-title="Amadeus | Legendary" > </audio>
-            
-                <div class="vz-wrapper -canvas">
-                    <canvas id="myCanvas" width="800" height="400"></canvas>
-                </div>
-            </div>
+                
+                
+                
+                    
+                    <div id="chart-container" style="width: 100%; height: 100%;"></div>
+                    <script src="../dist/circular-audio-wave.min.js"></script>
+                    <script>
+                        let wave = new CircularAudioWave(document.getElementById('chart-container'));
+                        wave.loadAudio('audio/audio1.mp3');
+                    </script>
+               
+
+           
 
 
 
@@ -125,7 +135,13 @@
 
             
 
-            
+            <div class="vz-wrapper">
+                <audio id="myAudio" src="assets/Audio/mainaudio.mp3" data-author="Click to Pause" data-title="Amadeus | Legendary" > </audio>
+                
+                <div class="vz-wrapper -canvas">
+                    <canvas id="myCanvas" width="800" height="400"></canvas>
+                </div>
+            </div>
             
 
 
@@ -152,6 +168,8 @@
                 </div>
 	        </div>
 	    </section>
+        
+       
         <!-- END Hero Section 
 
         <div class="partner-and-service">
@@ -643,6 +661,7 @@
 
     
     <!-- jQuery Plugins -->
+    <script src="assets/js/visualizer.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -651,7 +670,7 @@
 
     <!-- Custom Script -->
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/visualizer.js"></script>
+    
 
 </body>
 </html>
